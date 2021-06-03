@@ -1,0 +1,58 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+
+	xmlns:context="http://www.springframework.org/schema/context"
+
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+
+	xsi:schemaLocation="
+
+        http://www.springframework.org/schema/beans
+
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+
+        http://www.springframework.org/schema/mvc
+
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+
+        http://www.springframework.org/schema/context
+
+              http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:component-scan
+		base-package="com.huyvu.controller" />
+
+	<mvc:annotation-driven />
+
+	<!-- view resolver -->
+	<bean id="viewResolver"
+		class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".html" />
+		<property name="cacheable" value="false" />
+		<property name="characterEncoding" value="UTF-8" />
+	</bean>
+
+	<bean id="engine"
+		class="org.thymeleaf.spring5.SpringTemplateEngine">
+		<property name="templateResolver" ref="viewResolver" />
+	</bean>
+
+	<bean id=""
+		class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+		<property name="characterEncoding" value="UTF-8" />
+		<property name="templateEngine" ref="engine" />
+	</bean>
+
+
+
+	<mvc:resources mapping="/css/**"
+		location="/template/web/css/" />
+	<mvc:resources mapping="/fonts/**"
+		location="/template/web/fonts/" />
+	<mvc:resources mapping="/js/**"
+		location="/template/web/js/" />
+	<mvc:resources mapping="/img/**"
+		location="/template/web/img/" />
+</beans>

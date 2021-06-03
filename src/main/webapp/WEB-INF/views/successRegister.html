@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="#{label.form.title}">form</h1>
+
+	<div>
+		<p th:text="${user.firstName}" />
+
+
+	</div>
+	<div>
+		<p th:text="${user.lastName}" />
+
+
+	</div>
+	<div>
+		<p th:text="${user.email}" />
+
+	</div>
+	<div>
+		<p th:text="${user.password}" />
+
+	</div>
+	<div></div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+.navbar-default {
+	background-color: #F8F8F8;
+	border-color: #E7E7E7;
+}
+
+.container {
+	margin-top: 50xp;
+}
+
+.modal {
+	overflow: auto !important;
+}
+
+.modal-content {
+	width: 100%;
+}
+
+button.close {
+	position: fixed;
+	padding-right: 20px;
+	padding-top: 20px;
+	top: 0;
+	right: 0;
+}
+
+.block-image {
+	margin: 0px;
+}
+
+.icon-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+/* form login */
+.form-background>h3 {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.form-item {
+	margin-bottom: 15px;
+}
+
+.remember {
+	height: 50px;
+}
+
+.resetpassword {
+	text-align: right;
+	height: 50px;
+}
+
+.btn-login {
+	padding: 12px 10px;
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: white;
+	border: none;
+	outline: none;
+	display: table;
+	margin: 15px auto 15px;
+}
+
+.user-register {
+	text-align: center;
+}
